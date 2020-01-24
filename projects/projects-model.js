@@ -3,6 +3,7 @@ module.exports = {
   find,
   add,
   findById
+  // trueFalse
 };
 function find() {
   return db("projects");
@@ -21,3 +22,10 @@ function add(project) {
       return findById(id);
     });
 }
+// function trueFalse(value) {
+//   if (value === 0) {
+//     return false;
+//   } else {
+//     return true;
+//   }
+// }

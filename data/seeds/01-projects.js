@@ -5,9 +5,9 @@ exports.seed = function(knex) {
     .then(function() {
       // Inserts seed entries
       return knex("projects").insert([
-        { project_name: "Clean House", completed: true },
-        { project_name: "Wash Dog", completed: false },
-        { project_name: "Build a treehouse", completed: true }
+        { project_name: "Clean House", completed: "true" },
+        { project_name: "Wash Dog", completed: "false" },
+        { project_name: "Build a treehouse", completed: "true" }
       ]);
     });
 };
