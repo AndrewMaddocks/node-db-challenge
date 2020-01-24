@@ -2,7 +2,8 @@ const db = require("../data/db-config");
 module.exports = {
   find,
   add,
-  findById
+  findById,
+  findTasksForProject
   // trueFalse
 };
 function find() {
@@ -21,6 +22,17 @@ function add(project) {
 
       return findById(id);
     });
+}
+function findTasksForProject(id) {
+  //   select p.project_name, p.description, t.*
+  // from tasks as t
+  // join projects as p
+  // on t.project_id = p.id
+  // where p.id = 1;
+  return db("tasks as t ")
+    .select("p.project_name", "p.description", "t.*")
+    .join("projects as p ", "t.project_id", "p.id")
+    .where("p.id", id);
 }
 // function trueFalse(value) {
 //   if (value === 0) {
