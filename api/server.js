@@ -1,9 +1,8 @@
 const express = require("express");
 
-const ProjectsRouter = require("./projects/projects-router.js");
-const ResourcesRouter = require("./resources/resources-router.js");
-const TasksRouter = require("./tasks/tasks-router.js");
-
+const ProjectsRouter = require("../projects/projectsRouter");
+const ResourcesRouter = require("../resources/resourcesRouter");
+const TasksRouter = require("../tasks/tasksRouter");
 const server = express();
 
 server.use(express.json());
